@@ -1,4 +1,16 @@
-require("plugins")
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -10,10 +22,9 @@ vim.o.undolevel = 10000
 vim.o.updatetime = 300
 vim.o.wrap = false
 
-if packer_bootstrap then
-	require("packer").sync()
-	return
-end
+vim.cmd([[ let g:instant_username = "JohnGolgota" ]])
+
+require("plugins")
 
 vim.o.completeopt = "menuone,noselect,noinsert"
 
