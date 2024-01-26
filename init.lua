@@ -12,6 +12,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = " "
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.clipboard = "unnamedplus"
@@ -27,6 +29,8 @@ vim.cmd([[ let g:instant_username = "JohnGolgota" ]])
 require("plugins")
 
 vim.o.completeopt = "menuone,noselect,noinsert"
+
+require("telescope")
 
 server = {
 	on_attach = on_attach,
