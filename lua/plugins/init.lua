@@ -41,6 +41,7 @@ local default_plugins = {
       "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
   },
+  -- Telescope
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
@@ -48,6 +49,11 @@ local default_plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    cmd = { "TSInstall" },
+    build = { "TSUpdate" },
+  }
 }
 
 return require("lazy").setup(default_plugins)
