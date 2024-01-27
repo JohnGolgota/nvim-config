@@ -1,4 +1,4 @@
-require "core"
+require("core")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -17,12 +17,12 @@ require("plugins")
 require("mappings")
 
 server = {
-	on_attach = on_attach,
-	settings = {
-		["rust-analyzer"] = {
-			checkOnSave = {
-				command = "clippy"
-			},
-		},
-	},
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = {
+        command = "clippy",
+      },
+    },
+  },
 }
