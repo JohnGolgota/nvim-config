@@ -6,7 +6,9 @@
   ],
   "settings": {
     "Lua.diagnostics.globals": [
-      "vim"
+      "vim",
+      "server",
+      "on_attach"
     ],
     "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
@@ -80,15 +82,6 @@
     "turboConsoleLog.wrapLogMessage": false,
     "turboConsoleLog.logMessagePrefix": "",
     "php.validate.executablePath": null,
-    "[csharp]": {
-      "editor.defaultFormatter": "ms-dotnettools.csharp"
-    },
-    "[powershell]": {
-      "editor.defaultFormatter": "ms-vscode.powershell"
-    },
-    "[php]": {
-      "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
-    },
   },
   "extensions": {
     "recommendations": [
