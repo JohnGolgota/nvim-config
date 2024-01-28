@@ -1,9 +1,17 @@
 local M = {}
 
+M.doc = {
+  -- is key map for plugin. bool nulleable
+  plugin = true,
+  -- n: normal. object
+}
+
 M.general = { n = { ["<C-s>"] = { "<cmd> w <CR>", "Save File" } } }
 
 M.telescope = {
   plugin = true,
+
+  -- Modes n: normal, i: insert, v: visual, t: terminal
 
   n = {
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find Files" },

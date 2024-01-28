@@ -14,7 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("plugins")
-require("mappings")
+require("core.utils").load_mappings()
 
 server = {
   on_attach = on_attach,

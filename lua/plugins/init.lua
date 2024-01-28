@@ -48,12 +48,15 @@ local default_plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
+    init = function()
+      require("core.utils").load_mappings("telescope")
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
     cmd = { "TSInstall" },
     build = { "TSUpdate" },
-  }
+  },
 }
 
 return require("lazy").setup(default_plugins)
