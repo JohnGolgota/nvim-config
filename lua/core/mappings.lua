@@ -6,7 +6,7 @@ M.doc = {
   -- n: normal. object
 }
 
-M.general = { n = { ["<C-s>"] = { "<cmd> w <CR>", "Save File" } } }
+M.general = { n = { ["<C-s>"] = { "<cmd> w <CR>", "Save File" } }, i = { ["<C-s>"] = { "<cmd> w <CR>", "Save File" } } }
 
 M.telescope = {
   plugin = true,
