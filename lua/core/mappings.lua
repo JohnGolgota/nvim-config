@@ -15,7 +15,6 @@ M.telescope = {
 
   n = {
     ["<leader>ee"] = { "<cmd> Telescope find_files <CR>", "Find Files" },
-    ["<leader>ea"] = {
       ["<leader>ee"] = { "<cmd> Telescope find_files <CR>", "Find Files" },
       ["<leader>ea"] = {
         "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
@@ -24,7 +23,6 @@ M.telescope = {
       ["<leader>eg"] = { "<cmd> Telescope live_grep <CR>", "Live Grep" },
       ["<leader>eb"] = { "<cmd> Telescope buffers <CR>", "Buffers" },
       ["<leader>eh"] = { "<cmd> Telescope help_tags <CR>", "Help Tags" },
-    },
   },
 }
 M.nvimtree = {
