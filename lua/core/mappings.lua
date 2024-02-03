@@ -16,6 +16,8 @@ M.telescope = {
   n = {
     ["<leader>ee"] = { "<cmd> Telescope find_files <CR>", "Find Files" },
     ["<leader>ea"] = {
+    ["<leader>ee"] = { "<cmd> Telescope find_files <CR>", "Find Files" },
+    ["<leader>ea"] = {
       "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
       "Find Files",
     },
