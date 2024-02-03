@@ -40,6 +40,9 @@ local default_plugins = {
       "MunifTanjim/nui.nvim",
       "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    config = function()
+      require("core.utils").load_mappings("nvimtree")
+    end,
   },
   -- Telescope
   {

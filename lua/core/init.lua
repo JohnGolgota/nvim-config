@@ -17,3 +17,14 @@ vim.o.completeopt = "menuone,noselect,noinsert"
 
 -- OTRAS DISTINTAS A LAS ANTERIORES PERO QUE TAMPOCO SE
 vim.cmd([[ let g:instant_username = "JohnGolgota" ]])
+
+-- Api?
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight_yank", {}),
+  desc = "Highlight yanked text",
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 300 })
+  end,
+})
