@@ -57,8 +57,8 @@ local default_plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    cmd = { "TSInstall" },
-    build = { "TSUpdate" },
+    cmd = {"TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo"},
+    build = { ":TSUpdate" },
   },
 }
 
