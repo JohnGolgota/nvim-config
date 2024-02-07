@@ -1,21 +1,19 @@
 require("core")
 
+require("core.utils").load_mappings()
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+-- bootstrap lazy.nvim!
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+  require("core.bootstrap").gen_chadrc_template()
+  require("core.bootstrap").lazy(lazypath)
 end
+
+dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 
 require("plugins")
-require("core.utils").load_mappings()
 
 server = {
   on_attach = on_attach,
