@@ -1,1 +1,11 @@
 local*
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+*copy*
+*_ignorar_*
