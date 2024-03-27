@@ -1,6 +1,9 @@
 require("custom.plugins")
 
 require("lazy").setup({
+  -- other options
+'nvim-lua/plenary.nvim',
+'nvim-pack/nvim-spectre',
     -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins

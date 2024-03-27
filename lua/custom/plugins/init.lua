@@ -1,6 +1,8 @@
 return {
   "simrat39/rust-tools.nvim",
   "evanleck/vim-svelte",
+  'nvim-lua/plenary.nvim',
+'nvim-pack/nvim-spectre',
   {
     "github/copilot.vim",
     config = function()
