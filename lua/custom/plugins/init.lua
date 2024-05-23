@@ -2,7 +2,7 @@ return {
   "simrat39/rust-tools.nvim",
   "evanleck/vim-svelte",
   'nvim-lua/plenary.nvim',
-'nvim-pack/nvim-spectre',
+  'nvim-pack/nvim-spectre',
   {
     "github/copilot.vim",
     config = function()
@@ -16,6 +16,12 @@ return {
       })
 
       vim.g.copilot_no_tab_map = false
+    end,
+  },
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
     end,
   },
 }
